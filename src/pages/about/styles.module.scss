@@ -1,0 +1,242 @@
+@import '../../styles/variables';
+
+main.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 30px 30px 30px;
+
+  h2 {
+    margin: 100px 0;
+    font-size: 80px;
+    line-height: 130px;
+    font-weight: 700;
+    font-family: "Playfair Display", serif;
+    color: $color__text;
+    text-align: center;
+
+    span {
+      color: $color__main;
+    }
+
+    @include mobile-title;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-family: monospace;
+    font-size: 17px;
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+    img {
+      border: 4px solid $color__grey;
+      max-width: 41%;
+
+      @media (max-width: 420px) {
+        max-width: 100%;
+      }
+    }
+
+    > div {
+      > p {
+        margin: 0 0 15px;
+        line-height: 34px;
+        font-size: 17px;
+      }
+
+      ul {
+        list-style: none;
+      }
+    }
+
+    .row {
+      display: flex;
+      gap: 30px;
+
+      > div {
+        width: 50%;
+
+        p {
+          svg {
+            font-size: 24px;
+            margin-right: 10px;
+            vertical-align: text-bottom;
+          }
+
+          a:hover {
+            color: $color__main;
+          }
+        }
+      }
+
+      @include mobile {
+        flex-direction: column;
+        gap: 0;
+
+        > div {
+          width: 100%;
+
+          &:first-child li:last-child p{
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .btn {
+      margin-top: 20px;
+    }
+  }
+
+  .projects {
+    h3 {
+      font-size: 38px;
+      text-align: center;
+      font-family: "Playfair Display", serif;
+      margin-top: 100px;
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+
+      .item {
+        width: calc(50% - 15px);
+        padding: 15px;
+        background-color: $color__grey;
+        font-family: monospace;
+
+        .title {
+          position: relative;
+          font-family: 'Playfair Display', serif;
+          font-size: 21px;
+          margin-bottom: 15px;
+          padding-right: 150px;
+
+          .period {
+            background-color: $color__main;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 5px;
+            font-size: 14px;
+            border-radius: 4px;
+            font-family: monospace;
+          }
+        }
+
+        .desc {
+          font-size: 14px;
+          line-height: 1.5;
+        }
+      }
+
+      @include mobile {
+        flex-direction: column;
+
+        .item {
+          width: 100%;
+        }
+      }
+
+    }
+  }
+
+  .skills {
+    h3 {
+      font-size: 38px;
+      font-family: "Playfair Display", serif;
+      margin-top: 100px;
+    }
+
+    .list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      margin-bottom: 100px;
+
+      .item {
+        width: calc(50% - 15px);
+        font-family: monospace;
+
+        .title {
+          position: relative;
+          font-family: 'Playfair Display', serif;
+          font-size: 21px;
+
+          .bubble {
+            position: absolute;
+            top: 0;
+            font-size: 14px;
+            padding: 5px;
+            background-color: $color__main;
+            color: $color__text;
+            border-radius: 4px;
+            transform: translateX(-50%);
+
+            &::after {
+              content: '';
+              display: block;
+              position: absolute;
+              width: 8px;
+              height: 8px;
+              background-color: $color__main;
+              transform: rotate(45deg);
+              left: calc(50% - 4px);
+              bottom: -4px;
+            }
+          }
+        }
+
+        progress {
+          border-radius: 0;
+          height: 7px;
+          width: 100%;
+        }
+
+        progress::-webkit-progress-bar {
+          background-color: $color__grey;
+        }
+
+        progress::-webkit-progress-value {
+          background-color: $color__main;
+        }
+      }
+
+      @include mobile {
+        flex-direction: column;
+
+        .item {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .tg {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+
+    &:hover {
+      color: $color__main;
+    }
+
+    svg {
+      font-size: 50px;
+    }
+
+    font-size: 30px;
+  }
+}

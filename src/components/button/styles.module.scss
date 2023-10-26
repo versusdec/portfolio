@@ -1,0 +1,19 @@
+@import "../../styles/variables";
+
+
+.btn{
+  font-weight: 600;
+  padding: 13px 40px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+  background-color: $color__main;
+  text-decoration: none;
+  display: inline-block;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

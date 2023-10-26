@@ -1,0 +1,25 @@
+$color__main: #ff5722;
+$color__background: #292929;
+$color__grey: #444;
+$color__text: #fff;
+$screen_mobile: 768px;
+$screen_tablet: 1080px;
+
+@mixin mobile {
+  @media screen and (max-width: $screen_mobile) {
+    @content
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $screen_tablet) {
+    @content
+  }
+}
+
+@mixin mobile-title {
+  @include mobile {
+    font-size: 70px;
+    line-height: unset;
+  }
+}
