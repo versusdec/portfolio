@@ -31,10 +31,32 @@ main.main {
       display: flex;
       gap: 30px;
 
+      aside{
+        max-width: calc(100% - 530px);
+      }
+
       img {
         max-width: 500px;
         width: 100%;
+        transition: all 1s;
       }
+
+      picture {
+        transition: all 0.3s;
+        overflow: hidden;
+      }
+
+      &:hover {
+        picture {
+          transform: scale(1.05);
+
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+
 
       h3 {
         text-transform: capitalize;
@@ -52,6 +74,18 @@ main.main {
         li {
           font-family: monospace;
           font-size: 18px;
+        }
+      }
+
+      .preview {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        .git {
+          &:hover {
+            color: $color__main;
+          }
         }
       }
     }

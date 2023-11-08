@@ -1,10 +1,10 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react'
+import React, { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import Styles from './styles.module.scss';
 import cx from "classnames";
-import {book} from '../../navigation'
-import {Home as HomeIcon, Article as ArticleIcon, CasesRounded as CasesIcon} from '@mui/icons-material'
-import {useRouter} from 'next/router'
+import { book } from '../../navigation'
+import { Home as HomeIcon, Article as ArticleIcon, CasesRounded as CasesIcon } from '@mui/icons-material'
+import { useRouter } from 'next/router'
 
 const GetIcon = (icon) => {
   switch (icon) {
@@ -32,11 +32,15 @@ export const Nav = () => {
   }, [])
   
   useEffect(() => {
-    document.addEventListener('click', (e) => {
+    const handleDocumentClick = (e, ref, active, setActive) => {
       if (active && e.target.closest('header') !== ref.current) {
         setActive(false)
       }
-    })
+    }
+    const f = (e) => handleDocumentClick(e, ref, active, setActive)
+    
+    if (active) document.addEventListener('click', f)
+    else document.removeEventListener('click', f)
   }, [ref, active])
   
   const menuCX = cx({

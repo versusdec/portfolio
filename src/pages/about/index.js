@@ -6,6 +6,7 @@ import {SvgIcon} from "@mui/material";
 import {format, formatDistanceToNowStrict} from 'date-fns'
 import {Button} from "../../components/button";
 import TelegramIcon from "@mui/icons-material/Telegram";
+import { useEffect, useState } from "react";
 
 const skills = [
   {
@@ -34,9 +35,21 @@ const skills = [
   }
 ]
 
+
+
 const AboutPage = () => {
+  const [config, setConfig] = useState(null);
   const birthDate = format(new Date('1993-02-06'), 'MMMM yyyy')
-  const experience = formatDistanceToNowStrict(new Date('2018-08-10'), {unit: 'year'})
+  const experience = config && formatDistanceToNowStrict(new Date(config.experienceDate), {unit: 'year'})
+  
+  useEffect(()=>{
+    const getConfig = async ()=>{
+     await fetch('/config.json').then(res=>res.json()).then(res=>{
+       setConfig(res)
+      })
+    }
+    getConfig()
+  }, [])
   
   return (
     <main className={Styles.main}>
@@ -79,7 +92,7 @@ const AboutPage = () => {
           <a
             target="_blank"
             rel="noopener"
-            href="https://docs.google.com/document/d/15DzXYgHOkpo3-GVnODif3eGLjbWUz4s4/edit?usp=sharing&ouid=104887247239162815768&rtpof=true&sd=true"
+            href={config && config.cvLink}
           >
             <Button className={Styles.btn}>VIEW CV</Button>
           </a>

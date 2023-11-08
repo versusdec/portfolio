@@ -2,9 +2,10 @@ import { book } from '../../navigation'
 import Styles from './styles.module.scss'
 import { Button } from '../button'
 import Link from "next/link";
-import TelegramIcon from '@mui/icons-material/Telegram';
+import { Telegram as TelegramIcon, GitHub as GitHubIcon } from '@mui/icons-material';
 import { SvgIcon } from "@mui/material";
 import { AnimatedLayout } from "../../layouts/animated";
+import React from "react";
 
 const Home = () => {
   
@@ -16,6 +17,12 @@ const Home = () => {
       <p>I'm a Front-end developer based in Ukraine.</p>
       <Link href={book.about}>
         <Button>
+          <div className={Styles.hover}>
+            <svg viewBox="0 0 180 41" className="border">
+              <polyline points="178,1 178,40 1,40 1,1 178,1" className="bg-line"/>
+              <polyline points="178,1 178,40 1,40 1,1 178,1" className="hl-line"/>
+            </svg>
+          </div>
           more about me
         </Button>
       </Link>
@@ -28,6 +35,9 @@ const Home = () => {
       </div>
       <div className={Styles.homeSocial}>
         <ul className="">
+          <li className="github">
+            <a title="github" target="_blank" rel="noopener" href="https://github.com/versusdec"><SvgIcon><GitHubIcon/></SvgIcon></a>
+          </li>
           <li className="telegram">
             <a title="Telegram" target="_blank" rel="noopener" href="https://t.me/versusdec"><SvgIcon><TelegramIcon/></SvgIcon></a>
           </li>

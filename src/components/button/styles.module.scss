@@ -1,19 +1,20 @@
 @import "../../styles/variables";
 
 
-.btn{
+.btn {
   font-weight: 600;
   padding: 13px 40px;
   border-radius: 2px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease-in;
   color: #fff;
   background-color: $color__main;
   text-decoration: none;
   display: inline-block;
+  position: relative;
 
   &:hover {
-    opacity: 0.7;
+    background-color: rgba($color__main, 0.5);
   }
 }
