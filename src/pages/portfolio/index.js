@@ -252,7 +252,7 @@ const Portfolio = () => {
         </div>
       </div>
       <div id={'player'} className={Styles['player-wrapper']}>
-        <a title="github" target="_blank" rel="noopener" href="https://github.com/versusdec/versusdec.github.io/tree/gh-pages/recorder"><SvgIcon><GitHubIcon/></SvgIcon></a>
+        <a title="github" target="_blank" rel="noopener" href="https://github.com/versusdec/portfolio/tree/master/public/recorder"><SvgIcon><GitHubIcon/></SvgIcon></a>
         {/*<a className={Styles.upload} onClick={()=>{
           setOpen(true)
         }}>upload</a>*/}
