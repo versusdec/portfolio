@@ -4,7 +4,7 @@ main.main {
   display: flex;
   flex-direction: column;
   position: relative;
-  z-index: 1;
+  z-index: 3;
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 30px 30px 30px;
@@ -31,7 +31,7 @@ main.main {
       display: flex;
       gap: 30px;
 
-      aside{
+      aside {
         max-width: calc(100% - 530px);
       }
 
@@ -55,8 +55,6 @@ main.main {
           }
         }
       }
-
-
 
       h3 {
         text-transform: capitalize;
@@ -93,11 +91,68 @@ main.main {
     @include tablet {
       .item {
         flex-direction: column;
+        //overflow: hidden;
+
+        aside {
+          max-width: 100%;
+        }
 
         img {
           margin: 0 auto;
+        }
+
+        &:hover {
+          picture {
+            transform: scale(1);
+
+            img {
+              transform: scale(1);
+            }
+          }
         }
       }
     }
   }
 }
+
+.player-wrapper {
+  --color_bg: #15203D;
+  --color_secondary: #ff5722;
+  --color_primary: #ff9700;
+  --color_error: #c62828;
+  --color_font: rgb(255, 255, 255, 0.5);
+
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--color_bg);
+  padding: 15px;
+  border-radius: var(--border-radius);
+  box-shadow: rgba(255, 255, 255, .1) 0 0 5px;
+
+  > a {
+    position: absolute;
+    top: 80%;
+    right: 0;
+    opacity: 0.5;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &.upload {
+      cursor: pointer;
+      font-size: 11px;
+      top: calc(100% + 5px);
+      left: 15px;
+      display: table;
+    }
+  }
+
+  .loading {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), color-stop(var(--color_primary)), to(rgba(255, 255, 255, 0.1)));
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1), var(--color_primary), rgba(255, 255, 255, 0.1));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), var(--color_primary), rgba(255, 255, 255, 0.1));
+  }
+}
+

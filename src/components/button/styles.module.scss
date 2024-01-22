@@ -15,6 +15,47 @@
   position: relative;
 
   &:hover {
-    background-color: rgba($color__main, 0.5);
+    background-color: rgba($color__secondary, 0.7);
+  }
+}
+
+.secondary {
+  transition: all 0.5s;
+  background-color: transparent;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &::before {
+    background-color: $color__main;
+    transition: all 0.3s;
+  }
+
+  &:hover::before {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+
+  &::after {
+    opacity: 0;
+    transition: all 0.3s;
+    border: 2px solid rgba(255, 255, 255, 1);
+    transform: scale(1.2, 1.2);
+  }
+
+  &:hover::after {
+    opacity: 1;
+    transform: scale(1, 1);
   }
 }

@@ -1,0 +1,13 @@
+@import '../../styles/variables';
+
+.modal {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #fff;
+  border-radius: 7px;
+  z-index: 100;
+  box-shadow: $color__background 0 0 0 30px;
+}
