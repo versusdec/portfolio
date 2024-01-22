@@ -47,7 +47,7 @@ const Portfolio = () => {
               <a href={'/botto'} target={'_blank'}>
                 <Button secondary>preview</Button>
               </a>
-              <a href="https://github.com/versusdec/versusdec.github.io/tree/gh-pages/botto" target={"_blank"} className={Styles.git}>
+              <a href="https://github.com/versusdec/portfolio/tree/master/public/botto" target={"_blank"} className={Styles.git}>
                 <SvgIcon><GitHub/></SvgIcon>
               </a>
             </div>
@@ -75,7 +75,7 @@ const Portfolio = () => {
               <a href={'/yugo'} target={'_blank'}>
                 <Button secondary>preview</Button>
               </a>
-              <a href="https://github.com/versusdec/versusdec.github.io/tree/gh-pages/yugo" target={"_blank"} className={Styles.git}>
+              <a href="https://github.com/versusdec/portfolio/tree/master/public/yugo" target={"_blank"} className={Styles.git}>
                 <SvgIcon><GitHub/></SvgIcon>
               </a>
             </div>
@@ -103,7 +103,7 @@ const Portfolio = () => {
               <a href={'/estate'} target={'_blank'}>
                 <Button secondary>preview</Button>
               </a>
-              <a href="https://github.com/versusdec/versusdec.github.io/tree/gh-pages/estate" target={"_blank"} className={Styles.git}>
+              <a href="https://github.com/versusdec/portfolio/tree/master/public/estate" target={"_blank"} className={Styles.git}>
                 <SvgIcon><GitHub/></SvgIcon>
               </a>
             </div>
@@ -131,7 +131,7 @@ const Portfolio = () => {
               <a href={'/infrared'} target={'_blank'}>
                 <Button secondary>preview</Button>
               </a>
-              <a href="https://github.com/versusdec/versusdec.github.io/tree/gh-pages/infrared" target={"_blank"} className={Styles.git}>
+              <a href="https://github.com/versusdec/portfolio/tree/master/public/infrared" target={"_blank"} className={Styles.git}>
                 <SvgIcon><GitHub/></SvgIcon>
               </a>
             </div>
@@ -159,7 +159,7 @@ const Portfolio = () => {
               <a href={'/tdj'} target={'_blank'}>
                 <Button secondary>preview</Button>
               </a>
-              <a href="https://github.com/versusdec/versusdec.github.io/tree/gh-pages/tdj" target={"_blank"} className={Styles.git}>
+              <a href="https://github.com/versusdec/portfolio/tree/master/public/tdj" target={"_blank"} className={Styles.git}>
                 <SvgIcon><GitHub/></SvgIcon>
               </a>
             </div>
@@ -187,7 +187,7 @@ const Portfolio = () => {
               <a href={'/vodoley'} target={'_blank'}>
                 <Button secondary>preview</Button>
               </a>
-              <a href="https://github.com/versusdec/versusdec.github.io/tree/gh-pages/vodoley" target={"_blank"} className={Styles.git}>
+              <a href="https://github.com/versusdec/portfolio/tree/master/public/vodoley" target={"_blank"} className={Styles.git}>
                 <SvgIcon><GitHub/></SvgIcon>
               </a>
             </div>
@@ -215,7 +215,7 @@ const Portfolio = () => {
               <a href={'/vtb'} target={'_blank'}>
                 <Button secondary>preview</Button>
               </a>
-              <a href="https://github.com/versusdec/versusdec.github.io/tree/gh-pages/vtb" target={"_blank"} className={Styles.git}>
+              <a href="https://github.com/versusdec/portfolio/tree/master/public/vtb" target={"_blank"} className={Styles.git}>
                 <SvgIcon><GitHub/></SvgIcon>
               </a>
             </div>
