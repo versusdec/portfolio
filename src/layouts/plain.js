@@ -1,13 +1,15 @@
-import Head from 'next/head'
+import NextHead from 'next/head'
 import {Nav} from "../components/nav";
 
 export const PlainLayout = ({children, title})=>{
   const t = title || 'versusdec'
   return  <>
-    <Head>
+    <NextHead>
       <title>{t}</title>
       <link rel="icon" href="/assets/favicon.png" />
-    </Head>
+      <link rel="stylesheet" href="/recorder/Recorder.style.css" />
+      {/*<script type="text/javascript" src="/recorder/Recorder.js" async/>*/}
+    </NextHead>
     <Nav/>
     {children}
   </>

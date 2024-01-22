@@ -94,7 +94,7 @@ const AboutPage = () => {
             rel="noopener"
             href={config && config.cvLink}
           >
-            <Button className={Styles.btn}>VIEW CV</Button>
+            <Button style={{marginTop: 20}} secondary>VIEW CV</Button>
           </a>
         </div>
       </div>
