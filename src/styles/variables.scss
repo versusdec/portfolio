@@ -24,3 +24,9 @@ $screen_tablet: 1080px;
     line-height: unset;
   }
 }
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
